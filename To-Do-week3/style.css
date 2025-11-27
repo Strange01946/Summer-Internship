@@ -1,0 +1,171 @@
+/* Light Mode Theme - Blue Accent */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 40px 10px;
+  background: linear-gradient(to right, #e6f0ff, #cce0ff); /* Light blue */
+  transition: background 0.3s ease, color 0.3s ease;
+  color: #1c1c3c;
+}
+
+body.dark {
+  background: #121212;
+  color: #eee;
+}
+
+/* Container */
+#todo-container {
+  background-color: #fff;
+  padding: 20px;
+  max-width: 500px;
+  margin: auto;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 102, 255, 0.1);
+  border: 2px solid #99c2ff;
+}
+body.dark #todo-container {
+  background-color: #1e1e1e;
+  border-color: #333;
+}
+
+/* Header */
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#header h1 {
+  font-size: 28px;
+  margin: 0;
+  color: #0047ab;
+}
+#theme-toggle {
+  background: linear-gradient(to right, #3399ff, #005ce6);
+  border: none;
+  color: white;
+  padding: 6px 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Form */
+#todo-form {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+#todo-form input,
+#todo-form select,
+#todo-form button {
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+#todo-form button {
+  background: linear-gradient(to right, #3399ff, #0066cc);
+  color: white;
+  font-weight: bold;
+  border: none;
+  transition: background 0.3s ease;
+}
+#todo-form button:hover {
+  background: linear-gradient(to right, #66b3ff, #3385ff);
+}
+
+/* Search & Filter */
+#search-filter {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+#search-filter input,
+#search-filter select {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Task List */
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+li {
+  background: #fafafa;
+  border: 1px solid #ddd;
+  padding: 10px 10px 40px 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  position: relative;
+}
+body.dark li {
+  background: #2a2a2a;
+  border: 1px solid #444;
+}
+li .meta {
+  font-size: 12px;
+  margin-top: 5px;
+  color: #666;
+}
+body.dark li .meta {
+  color: #aaa;
+}
+
+/* Buttons Section */
+.task-actions {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  gap: 8px;
+}
+.edit-btn,
+.delete-btn,
+.complete-btn {
+  font-size: 13px;
+  padding: 5px 7px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+  transition: 0.2s;
+}
+.delete-btn {
+  background-color: crimson;
+}
+.edit-btn {
+  background-color: #f0ad4e;
+}
+.complete-btn {
+  background-color: #28a745;
+}
+
+/* Priority Color Bars */
+li[data-priority="high"] {
+  border-left: 6px solid red;
+}
+li[data-priority="medium"] {
+  border-left: 6px solid orange;
+}
+li[data-priority="low"] {
+  border-left: 6px solid green;
+}
+
+/* Completed Style */
+.completed {
+  text-decoration: line-through;
+  color: gray !important;
+}
+
+/* Counters */
+.counter-container {
+  margin-top: 20px;
+  font-size: 16px;
+}
